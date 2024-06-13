@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suvery Form for On-the-job Trainees</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <h1 id="title">On-The-Job Trainees Survey Form</h1>
+      <p id="description">
+        Thank you for participating in our On-the-Job Training (OJT) Program. We
+        value your feedback and would appreciate it if you could take a few
+        moments to complete this survey. Your responses will help us evaluate
+        the effectiveness of our training program and identify areas for
+        improvement. All responses are confidential and will be used solely for
+        the purpose of enhancing the quality of our training initiatives. Thank
+        you for your time and valuable insights.
+      </p>
+      <!--START OF SURVEY FORM -->
+      <form action="" id="survey-form">
+       <fieldset>
+        <!-- PERSONAL INFORMATION -->
+         <legend class="category">Personal Information</legend>
+            <label for="name" id="name-label">Full Name</label>
+            <input type="text" name="name" id="name" placeholder="ex: Juan Dela Cruz" required/>
+            <label for="email" id="email-label">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="ex: juandelacruz@gmail.com" required/>
+            <label for="cp_number" id="cp_number-label">Contact number</label>
+            <input type="tel" name="cp_number" id="cp_number" placeholder="ex: 09171231234" pattern="[0-9]{11}"/>
+            <label for="number" id="number-label">Age</label>
+            <input type="number" name="number" id="number" min="18" max="50" placeholder="ex: 18" required/>
+            <!-- Gender -->
+            <p>Gender</p>
+            <label for="male"><input type="radio" name="male-female" id="male" class="inline" value="male">Male</label>
+            <label for="female"><input type="radio" name="male-female" id="female" class="inline" value="female">Female</label>
+            <label for="other"><input type="radio" name="male-female" id="other" class="inline" value="other" >Other</label>
+            <!-- Department -->
+            <label for="department-label">Department </label>
+            <select name="dropdown" id="dropdown">
+              <option value="">(select one)</option>
+              <option value="1">CICS</option>
+              <option value="2">CBEA</option>
+              <option value="3">CHM</option>
+              <option value="4">CFAS</option>
+              <option value="5">CIT</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <!-- Training Program Details -->
+             <legend class="category">Training Program Details</legend>
+             <label for="training">Name of the Training Program</label>
+             <input type="text" name="training_program" id="training_program">
+             <label for="training">Training Duration (in weeks)</label>
+             <input type="week" name="duration" id="duration">
+             <label for="trainers_name">Trainer's Name </label>
+             <input type="text" name="trainer" id="trainer">
+          <!-- <label for="networking"> <input type="checkbox" class="inline" value="networking" id="networking" name="course"/>Networking</label>
+          <label for="programming"> <input type="checkbox" class="inline" value="Programming" id="progremming"/>Programming</label>
+         
+           -->
+        </fieldset>
+        <fieldset>
+            <!-- Evaluation of the Training Program -->
+            <legend class="category">Evaluation of the Training Program</legend>
+            <p>Overall Satisfaction with the Training Program</p>
+            <label><input class="inline" type="radio" name="overall_satisfaction" id="very-satisfactory" value="very-satisfactory">Very Satisfied</label>
+            <label><input class="inline" type="radio" name="overall_satisfaction" id="satisfied" value="satisfied">Satisfied</label>
+            <label><input class="inline" type="radio" name="overall_satisfaction" id="neutral" value="neutral">Neutral</label>
+            <label><input class="inline" type="radio" name="overall_satisfaction" id="disatisfied" value="disatisfied">Disatisfied</label>
+            <label><input class="inline" type="radio" name="overall_satisfaction" id="very-disatisfied" value="very-disatisfied">Very Disatisfied</label>
+            
+            <p>Quality of the Training Materials</p>
+            <label><input class="inline" type="radio" name="quality" id="excellent" value="excellent">Excellent</label>
+            <label><input class="inline" type="radio" name="quality" id="good" value="good">Good</label>
+            <label><input class="inline" type="radio" name="quality" id="average" value="average">Average</label>
+            <label><input class="inline" type="radio" name="quality" id="poor" value="poor">Poor</label>
+
+            <p>Trainer's Knowledge and Expertise</p>
+            <label><input class="inline" type="radio" name="trainers_knowledge" id="tk_excellent" value="tk_excellent">Excellent</label>
+            <label><input class="inline" type="radio" name="trainers_knowledge" id="tk_good" value="tk_good">Good</label>
+            <label><input class="inline" type="radio" name="trainers_knowledge" id="tk_average" value="tk_average">Average</label>
+            <label><input class="inline" type="radio" name="trainers_knowledge" id="tk_poor" value="tk_poor">Poor</label>
+            <label><input class="inline" type="radio" name="trainers_knowledge" id="tk_very_poor" value="tk_very_poor">Very Poor</label>
+
+            <p>Effectiveness of the Trainer's Teaching Methods</p>
+            <label><input class="inline" type="radio" name="effectiveness" id="effectiveness_excellent" value="effectiveness_excellent">Excellent</label>
+            <label><input class="inline" type="radio" name="effectiveness" id="effectiveness_good" value="effectiveness_good">Good</label>
+            <label><input class="inline" type="radio" name="effectiveness" id="effectiveness_average" value="effectiveness_average">Average</label>
+            <label><input class="inline" type="radio" name="effectiveness" id="effectiveness_poor" value="effectiveness_poor">Poor</label>
+            <label><input class="inline" type="radio" name="effectiveness" id="effectiveness_very_poor" value="effectiveness_very_poor">Very Poor</label>
+        </fieldset>
+        <fieldset>
+            <!-- Skills and Knowledge -->
+            <legend class="category">Skills and Knowledge</legend>
+            <p>Skills Acquired from the Training</p>
+            <label><input class="inline" type="checkbox" name="skills" id="skills_ts" value="skills_ts">Technical Skills</label>
+            <label><input class="inline" type="checkbox" name="skills" id="skills_ss" value="skills_ss">Soft Skills</label>
+            <label><input class="inline" type="checkbox" name="skills" id="skills_ps" value="skills_ps">Problem Solving</label>
+            <label><input class="inline" type="checkbox" name="skills" id="skills_tw" value="skills_tw">Team Work</label>
+            <label><input class="inline" type="checkbox" name="skills" id="skills_o" value="skills_o">Others</label>
+
+            <p>Confidence in Applying Learned Skills on the Job</p>
+            <label><input class="inline" type="radio" name="confidence" id="confidence" value="confidence_vc">Very Confident</label>
+            <label><input class="inline" type="radio" name="confidence" id="confidence" value="confidence_c">Confident</label>
+            <label><input class="inline" type="radio" name="confidence" id="confidence" value="confidence_n">Neutral</label>
+            <label><input class="inline" type="radio" name="confidence" id="confidence" value="confidence_nc">Not Confident</label>
+            <label><input class="inline" type="radio" name="confidence" id="confidence" value="confidence_naac">Not at All Condident</label>
+
+        </fieldset>
+        <fieldset>
+            <!-- Feedback and Suggestions -->
+            <legend class="category">Feedback and Suggestions</legend>
+            <label for="training_comment">What Did You Like Most About the Training Program?</label>
+            <textarea name="like_about_the_training" id="training_comment" ></textarea>
+            <label for="like_least_about_training">What Did You Like Least About the Training Program? </label>
+            <textarea name="like_least_about_training" id="like_least_about_training"></textarea>
+            <label for="suggestions">Suggestions for Improving the Training Program </label>
+            <textarea name="suggestions" id="suggestions"></textarea>
+            <label for="additional_comments">Additional Comments </label>
+            <textarea name="additional_comments" id="additional_comments"></textarea>
+            
+        </fieldset>
+      
+        <fieldset>
+            <!-- Confirmation and Submission -->
+            <legend class="category">Confirmation and Submission</legend>
+            <p>Would You Recommend This Training Program to Others?</p>
+            <label for="reccommend_training"> <input type="radio" class="inline" name="reccommend_training" id="reccommend_training_yes" value="yes">Yes</label>
+            <label for="reccommend_training"> <input type="radio" class="inline" name="reccommend_training" id="reccommend_training_no" value="no">No</label>
+            <label for="comments">Any comments or suggestions?</label>
+            <textarea name="comments" id="comments"></textarea>
+            <label for="agree"> <input type="checkbox" class="inline" name="agree" id="agree" value="agree"> I agree to share my feedback with the training program coordinators</label>
+            <input type="submit" value="Submit" id="submit" />
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
