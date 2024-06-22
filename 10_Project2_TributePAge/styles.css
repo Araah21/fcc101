@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+}
+#title,
+p,
+h3 {
+  text-align: center;
+}
+
+#container {
+  background-color: whitesmoke;
+  border-radius: 8px;
+}
+
+#img-div {
+  /* width: 80%; */
+  background-color: white;
+  padding: 30px 0;
+}
+
+#image {
+  display: block;
+  margin: 0 auto;
+  width: 85%;
+  max-width: 100%;
+  padding: 10px 0;
+}
+
+#img-caption {
+  text-align: center;
+  /* padding: 10px 0; */
+  width: 80%;
+  margin: 10px auto;
+}
+
+#tribute-info {
+  display: block;
+}
+
+#tribute-info > ul {
+  max-width: 550px;
+  margin: 10px auto;
+  text-align: left;
+}
+
+ul > li {
+  margin: 16px 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+#quote{
+   font-style: italic;
+   max-width: 545px;
+   margin: 50px auto;
+   text-align: left;
+}
+
+#headline{
+    margin: 50px 0;
+}
+
+h3:last-child{
+   font-weight: bold;
+   padding: 20px 0;
+
+}
