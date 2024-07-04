@@ -23,3 +23,23 @@ html, body{
     position: relative;
     margin-left: 320px;
 }
+
+
+/* review */
+#navbar a {
+    display: block;
+    padding: 10px 30px;
+    color: #4d4e53;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: auto;
+}
+code {
+    font-family: monospace;
+}

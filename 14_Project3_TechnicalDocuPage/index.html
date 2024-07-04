@@ -4,52 +4,218 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Technical Doucmentation Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main id="main-doc">
       <section class="main-section" id="CSS_basics">
         <header>CSS basics</header>
         <article>
-            <p>CSS (Cascading Style Sheets) is the code that styles web content. CSS basics walks through what you need to get started. We'll answer questions like: How do I make text red? How do I make content display at a certain location in the (webpage) layout? How do I decorate my webpage with background images and colors?</p>
-            <p>Use this CSS reference to browse an alphabetical index of all of the standard CSS properties, pseudo-classes, pseudo-elements, data types, functional notations and at-rules. You can also browse key CSS concepts and a list of selectors organized by type. Also included is a brief DOM-CSS / CSSOM reference.</p>
-            <h2>What is CSS?</h2>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+          <p>
+            CSS (Cascading Style Sheets) is the code that styles web content.
+            CSS basics walks through what you need to get started. We'll answer
+            questions like: How do I make text red? How do I make content
+            display at a certain location in the (webpage) layout? How do I
+            decorate my webpage with background images and colors?
+          </p>
+          <header>What is CSS?</header>
+          <p>
+            Like HTML, CSS is not a programming language. It's not a markup
+            language either. CSS is a style sheet language. CSS is what you use
+            to selectively style HTML elements. For example, this CSS selects
+            paragraph text, setting the color to red:
+          </p>
+          <code>p { color: red; }</code>
+          <p>
+            Let's try it out! Using a text editor, paste the three lines of CSS
+            (above) into a new file. Save the file as style.css in a directory
+            named styles.
+          </p>
+          <p>
+            To make the code work, we still need to apply this CSS (above) to
+            your HTML document. Otherwise, the styling won't change the
+            appearance of the HTML. (If you haven't been following our project,
+            pause here to read Dealing with files and HTML basics.)
+          </p>
+
+          <ol>
+            <li>
+              Open your <code>index.html</code>. Paste the following line in the
+              head (between the <code>&lt;head&gt;</code> and
+              <code>&lt;/head&gt;</code> tags):
+            </li>
+
+            <pre><code>&lt;link href="styles/style.css" rel="stylesheet" /&gt;</code></pre>
+
+            <li>
+              Save <code>index.html</code> and load it in your browser. You
+              should see something like this:
+            </li>
+            <img
+              src="./website-screenshot-styled.png"
+              alt="website screenshot"
+            />
+          </ol>
+          <p>
+            If your paragraph text is red, congratulations! Your CSS is working.
+          </p>
         </article>
-        <code></code>
+      </section>
+
+      <section class="main-section" id="Anatomy_of_a_CSS_ruleset">
+        <header>Anatomy of a CSS ruleset</header>
+        <p>
+          Let's dissect the CSS code for red paragraph text to understand how it
+          works:
+        </p>
+        <figure>
+          <img src="./css-declaration-small.png" alt="" />
+          <figcaption>
+            The whole structure is called a ruleset. (The term ruleset is often
+            referred to as just rule.) Note the names of the individual parts:
+          </figcaption>
+        </figure>
+        <dl>
+          <dt>Selector</dt>
+          <dd>
+            This is the HTML element name at the start of the ruleset. It
+            defines the element(s) to be styled (in this example,
+            <code>&lt;p&gt;</code> elements). To style a different element,
+            change the selector.
+          </dd>
+          <dt>Declaration</dt>
+          <dd>
+            This is a single rule like <code>color: red;</code>. It specifies
+            which of the element's properties you want to style.
+          </dd>
+          <dt>Properties</dt>
+          <dd>
+            These are ways which you can style an HTML element. (In this exaple,
+            <code>color</code> is a property of the &lt;p &gt; elements.) In
+            CSS, you can choose which properties you want to affect in the rule.
+          </dd>
+
+          <dt>Property Value</dt>
+          <dd>
+            To the right of the property—after the colon—there is the property
+            value. This chooses one out of many possible appearances for a given
+            property. (For example, there are many <code>color</code> values in
+            addition to <code>red</code>.)
+          </dd>
+        </dl>
+        <p>Note the other important parts of the syntax:</p>
         <ul>
-            <li></li>
+          <li>
+            Apart from the selector, each ruleset must be wrapped in curly
+            braces. ({})
+          </li>
+          <li>
+            Within each declaration, you must use a colon (:) to separate the
+            property from its value or values.
+          </li>
+          <li>
+            Within each ruleset, you must use a semicolon (;) to separate each
+            declaration from the next one.
+          </li>
+        </ul>
+        <p>
+          To modify multiple property values in one ruleset, write them
+          separated by semicolons, like this:
+        </p>
+        <pre><code>p {
+          color: red;
+          width: 500px;
+          border: 1px solid black;
+      }
+      </code></pre>
+      </section>
+      <section class="main-section" id="Selecting_multiple_elements">
+        <header>Selecting multiple elements</header>
+        <p>
+          You can also select multiple elements and apply a single ruleset to
+          all of them. Separate multiple selectors by commas. For example:
+        </p>
+        <pre><code>
+  p,
+  li,
+  h1 {
+    color: red;
+  }</code>
+       </pre>
+        <h3>Different types of selectors</h3>
+        <p>
+          There are many different types of selectors. The examples above use
+          element selectors, which select all elements of a given type. But we
+          can make more specific selections as well. Here are some of the more
+          common types of selectors:
+        </p>
+        <table>
+         <thead>
+            <tr>
+            <th>Selector name</th>
+            <th>What does it select</th>
+            <th>Example</th>
+         </thead>
+         <tbody>
+          <tr>
+            <td>Element selector (sometimes called a tag or type selector)</td>
+            <td>All HTML elements of the specified type.</td>
+            <td><code>p</code><br>selects <code>&lt;p&gt;</code></td>
+          </tr>
+          <tr>
+            <td>ID selector</td>
+      <td>
+        The element on the page with the specified ID. On a given HTML page,
+        each id value should be unique.
+      </td>
+      <td>
+        <code>#my-id</code><br>selects <code>&lt;p id="my-id"&gt;</code> or
+        <code>&lt;a id="my-id"&gt;</code>
+      </td>
+          </tr>
+          <tr>
+            <td>Class selector</td>
+            <td>
+              The element(s) on the page with the specified class. Multiple instances
+              of the same class can appear on a page.
+            </td>
+            <td>
+              <code>.my-class</code><br>selects
+              <code>&lt;p class="my-class"&gt;</code> and
+              <code>&lt;a class="my-class"&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>Attribute selector</td>
+            <td>The element(s) on the page with the specified attribute.</td>
+            <td>
+              <code>img[src]</code><br>selects
+              <code>&lt;img src="myimage.png"&gt;</code> but not
+              <code>&lt;img&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>Pseudo-class selector</td>
+            <td>
+              The specified element(s), but only when in the specified state. (For
+              example, when a cursor hovers over a link.)
+            </td>
+            <td>
+              <code>a:hover</code><br>selects <code>&lt;a&gt;</code>, but only when
+              the mouse pointer is hovering over the link.
+            </td>
+          </tr>
+         </tbody>
+          </tr>
+        </table>
+        <p>There are many more selectors to discover. To learn more, see the MDN Selectors guide.</p>
+        <ul>
+          <li></li>
         </ul>
       </section>
       <section class="main-section" id="Fonts_and_text">
         <header>Fonts and text</header>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <code>p {
-            color: red;
-          }</code>
-        <ul>
-            <li></li>
-        </ul>
-      </section>
-      <section class="main-section" id="CSS:_all_about_boxes">
-        <header>CSS: all about boxes</header>
-        <p></p>
+        <p>Now that we've explored some CSS fundamentals, let's improve the appearance of the example by adding more rules and information to the style.css file.</p>
         <p></p>
         <p></p>
         <p></p>
@@ -61,24 +227,7 @@
         <p></p>
         <code></code>
         <ul>
-            <li></li>
-        </ul>
-      </section>
-      <section class="main-section" id="CSS_Display-Box">
-        <header>CSS Display-Box</header>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <code></code>
-        <ul>
-            <li></li>
+          <li></li>
         </ul>
       </section>
       <section class="main-section" id="Media_Queries">
@@ -95,7 +244,7 @@
         <p></p>
         <code></code>
         <ul>
-            <li></li>
+          <li></li>
         </ul>
       </section>
 
@@ -103,7 +252,9 @@
         <header>CSS Doucmentation</header>
         <a href="#CSS_basics" class="nav-link">CSS basics</a>
         <a href="#Fonts_and_text" class="nav-link">Fonts and text</a>
-        <a href="#CSS:_all_about_boxes" class="nav-link">CSS: all about boxes</a>
+        <a href="#CSS:_all_about_boxes" class="nav-link"
+          >CSS: all about boxes</a
+        >
         <a href="#CSS_Display-Box" class="nav-link">CSS Display-Box</a>
         <a href="#Media_Queries" class="nav-link">Media Queries</a>
       </nav>
