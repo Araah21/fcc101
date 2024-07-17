@@ -10,7 +10,6 @@
 }
 
 * {
-  
   box-sizing: border-box;
 }
 
@@ -30,15 +29,15 @@ body {
   justify-content: space-evenly;
 }
 
-.building-wrap{
+.building-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.window-wrap{
+.window-wrap {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: space-evenly;
 }
 
@@ -47,7 +46,6 @@ body {
 .bb1 {
   width: 10%;
   height: 70%;
- 
 }
 
 .bb1a {
@@ -56,22 +54,16 @@ body {
 
 .bb1b {
   width: 80%;
- 
 }
 
 .bb1c {
   width: 90%;
-  
 }
 
 .bb1d {
   width: 100%;
   height: 70%;
-  background: linear-gradient(
-   
-    var(--building-color1) 50%,
-    var(--window-color1)
-  );
+  background: linear-gradient(var(--building-color1) 50%, var(--window-color1));
 }
 
 .bb2 {
@@ -87,14 +79,12 @@ body {
     var(--building-color3),
     var(--building-color3),
     var(--window-color3) 15%
-  )
-  
+  );
 }
 
 .bb4 {
   width: 11%;
   height: 58%;
-  
 }
 /* building-wrap */
 /* FOREGROUND BUILDINGS - "fb" stands for "foreground building"  */
@@ -102,34 +92,31 @@ body {
 .fb1 {
   width: 10%;
   height: 60%;
-  
 }
 
 .fb2 {
   width: 10%;
   height: 40%;
- 
 }
 
 .fb3 {
   width: 10%;
   height: 35%;
-  
 }
 .fb4 {
   width: 8%;
   height: 45%;
-  
+
   position: relative;
   left: 10%;
 }
 
-.fb4a{
+.fb4a {
   border-top: 5vh solid transparent;
-  border-left:8vw solid var(--building-color1);
+  border-left: 8vw solid var(--building-color1);
 }
 
-.fb4b{
+.fb4b {
   width: 100%;
   height: 89%;
   background-color: var(--building-color1);
@@ -137,8 +124,7 @@ body {
   flex-wrap: wrap;
 }
 
-
-.fb4-window{
+.fb4-window {
   width: 30%;
   height: 10%;
   border-radius: 50%;
@@ -146,48 +132,44 @@ body {
   margin: 10%;
 }
 
-
 .fb5 {
   width: 10%;
   height: 33%;
- 
 
   position: relative;
   right: 10%;
   background: repeating-linear-gradient(
-    var(--building-color2) 0%,
-    var(--building-color2) 5%,
-    transparent 5%,
-    transparent 10%
-  ),
-  repeating-linear-gradient(
-    90deg,
-    var(--building-color2) 0%,
-    var(--building-color2) 12%,
-    var(--window-color2) 12%,
-    var(--window-color2) 44%
-
-  )
+      var(--building-color2) 0%,
+      var(--building-color2) 5%,
+      transparent 5%,
+      transparent 10%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      var(--building-color2) 0%,
+      var(--building-color2) 12%,
+      var(--window-color2) 12%,
+      var(--window-color2) 44%
+    );
 }
 
 .fb6 {
   width: 9%;
   height: 38%;
-  
-  background: repeating-linear-gradient(
-    90deg,
-    var(--building-color3) 0%,
-    var(--building-color3) 10%,
-    transparent 10%,
-    transparent 30%
-  ),
 
-  repeating-linear-gradient(
-    var(--building-color3) 0%,
-    var(--building-color3) 10%,
-    var(--window-color3) 10%,
-    var(--window-color3) 30%
-  )
+  background: repeating-linear-gradient(
+      90deg,
+      var(--building-color3) 0%,
+      var(--building-color3) 10%,
+      transparent 10%,
+      transparent 30%
+    ),
+    repeating-linear-gradient(
+      var(--building-color3) 0%,
+      var(--building-color3) 10%,
+      var(--window-color3) 10%,
+      var(--window-color3) 30%
+    );
 }
 
 .background-buildings,
@@ -206,8 +188,7 @@ body {
   background: linear-gradient(var(--building-color1), var(--window-color1));
 }
 
-
-.bb2b{
+.bb2b {
   height: 100%;
   width: 100%;
   background: repeating-linear-gradient(
@@ -218,122 +199,114 @@ body {
   );
 }
 
-.bb2a{
+.bb2a {
   border-bottom: 5vh solid var(--building-color2);
   border-left: 5vw solid transparent;
   border-right: 5vw solid transparent;
 }
 
-
-.bb4a{
+.bb4a {
   width: 3%;
   height: 10%;
   background-color: var(--building-color4);
 }
 
-.bb4b{
+.bb4b {
   width: 80%;
   height: 5%;
   background-color: var(--building-color4);
 }
 
-.bb4c{
+.bb4c {
   width: 100%;
   height: 85%;
   background-color: var(--building-color4);
 }
 
-
-.bb4-window{
+.bb4-window {
   width: 18%;
   height: 90%;
   background-color: var(--window-color4);
 }
 
-.fb1b{
+.fb1b {
   width: 60%;
   height: 10%;
   background-color: var(--building-color4);
 }
-.fb1c{
-width: 100%;
-height: 80%;
-background: repeating-linear-gradient(
-  90deg,
-  var(--building-color4) 0%,
-  var(--building-color4) 10%,
-  transparent 10%,
-  transparent 15%
-),
-
-
+.fb1c {
+  width: 100%;
+  height: 80%;
+  background: repeating-linear-gradient(
+      90deg,
+      var(--building-color4) 0%,
+      var(--building-color4) 10%,
+      transparent 10%,
+      transparent 15%
+    ),
     repeating-linear-gradient(
       var(--building-color4) 0%,
       var(--building-color4) 10%,
       var(--window-color4) 10%,
       var(--window-color4) 90%
-    )
+    );
 }
 
-.fb1a{
+.fb1a {
   border-bottom: 7vh solid var(--building-color4);
   border-right: 2vw solid transparent;
   border-left: 2vw solid transparent;
 }
 
-.fb2a{
+.fb2a {
   width: 100%;
-  border-bottom:10vh solid var(--building-color3);
+  border-bottom: 10vh solid var(--building-color3);
   border-left: 1vw solid transparent;
   border-right: 1vw solid transparent;
-  
 }
 
-.fb2b{
+.fb2b {
   width: 100%;
   height: 75%;
   background-color: var(--building-color3);
 }
 
-.fb2-window{
+.fb2-window {
   width: 22%;
   height: 100%;
   background-color: var(--window-color3);
-  
 }
 
-.fb3a{
+.fb3a {
   width: 80%;
   height: 15%;
   background-color: var(--building-color1);
 }
 
-.fb3b{
+.fb3b {
   width: 100%;
   height: 35%;
   background-color: var(--building-color1);
 }
 
-.fb3-window{
+.fb3-window {
   width: 25%;
   height: 80%;
   background-color: var(--window-color1);
 }
 
-
 .sky {
   background: radial-gradient(
-      closest-corner circle at 15% 15%,
-      #ffcf33,
-      #ffcf33 20%,
-      #ffff66 21%,
-      #bbeeff 100%
-    );
+    closest-corner circle at 15% 15%,
+    #ffcf33,
+    #ffcf33 20%,
+    #ffff66 21%,
+    #bbeeff 100%
+  );
 }
 
-@media(max-width: 1000px){
-
-  :root{
+@media (max-width: 1000px) {
+  :root {
     --building-color1: #000;
     --building-color2: #000;
     --building-color3: #000;
@@ -343,13 +316,13 @@ background: repeating-linear-gradient(
     --window-color3: #777;
     --window-color4: #777;
   }
-  .sky{
+  .sky {
     background: radial-gradient(
       circle closest-corner at 15% 15%,
       #ccc,
-  #ccc 20%,
-  #445 21%,
-  #223 100%
+      #ccc 20%,
+      #445 21%,
+      #223 100%
     );
   }
 }
